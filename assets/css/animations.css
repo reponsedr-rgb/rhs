@@ -1,0 +1,643 @@
+/**
+ * PREMIUM ANIMATIONS & MICRO-INTERACTIONS
+ * All 8 animation packages for Rusumo High School
+ * Load AFTER bootstrap.min.css, style.css, brand.css
+ */
+
+/* ============================================================================
+   OPTION 1: SMOOTH PAGE TRANSITIONS
+   ============================================================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main#spa-main {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.page-header,
+.container-fluid.page-header {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* ============================================================================
+   OPTION 2: ENHANCED BUTTON & LINK EFFECTS
+   ============================================================================ */
+
+@keyframes buttonLift {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+    100% {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes underlineSlide {
+    from {
+        width: 0;
+        left: 0;
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* Button hover effect with lift */
+.btn-primary {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover:not(:disabled) {
+    animation: buttonLift 0.4s ease-out forwards;
+    transform: translateY(-4px);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Link hover with underline animation */
+a.nav-link,
+a.dropdown-item,
+.navbar-brand {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+a.nav-link::after,
+a.dropdown-item::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--nlca-secondary), rgba(224, 155, 52, 0.5));
+    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+a.nav-link:hover::after,
+a.dropdown-item:hover::after {
+    width: 100%;
+}
+
+/* Icon rotation on hover */
+.fa,
+[class^="fas"],
+[class^="fab"] {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:hover .fa,
+.btn:hover [class^="fas"],
+.btn:hover [class^="fab"] {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Contact button pulsing animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(224, 155, 52, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(224, 155, 52, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(224, 155, 52, 0);
+    }
+}
+
+a[href*="Contact"]:first-of-type {
+    animation: pulse 2s infinite;
+}
+
+/* ============================================================================
+   OPTION 3: CARD HOVER ANIMATIONS
+   ============================================================================ */
+
+@keyframes cardLift {
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes imageZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* Program cards, facility cards, service items */
+.service-item,
+.portfolio-item,
+.faq-item {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item:hover,
+.portfolio-item:hover {
+    animation: cardLift 0.5s ease-out forwards;
+}
+
+/* Image zoom on card hover */
+.service-item img,
+.portfolio-item img {
+    transition: transform 0.5s ease-out;
+}
+
+.service-item:hover img,
+.portfolio-item:hover img {
+    animation: imageZoom 0.5s ease-out forwards;
+}
+
+/* Border color transition */
+.service-item:hover,
+.portfolio-item:hover {
+    border-color: var(--nlca-secondary) !important;
+}
+
+/* Gallery items */
+.gallery-item {
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 10px 28px rgba(224, 155, 52, 0.3);
+}
+
+/* ============================================================================
+   OPTION 4: SCROLL PROGRESS & INDICATORS
+   ============================================================================ */
+
+@keyframes progressFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Scroll progress bar */
+#scrollProgressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--nlca-secondary), #e0c574);
+    z-index: 9999;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 8px rgba(224, 155, 52, 0.6);
+}
+
+/* Floating back-to-top with fade */
+.back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.back-to-top:hover {
+    background: var(--nlca-secondary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================================
+   OPTION 5: TEXT & HEADING ANIMATIONS
+   ============================================================================ */
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Heading animations */
+h1, h2, h3, h4, h5, h6 {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.section-title h1,
+.section-title h2,
+.nlca-section-title {
+    animation: slideInLeft 0.7s ease-out;
+    position: relative;
+}
+
+.section-title h2::after,
+.nlca-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--nlca-secondary), transparent);
+    margin: 12px auto 0;
+    animation: underlineGrow 0.6s ease-out 0.3s backwards;
+}
+
+/* Hero text animation */
+.nlca-hero-text-block {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+/* Paragraph stagger */
+p {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* ============================================================================
+   OPTION 6: PARALLAX & 3D EFFECTS
+   ============================================================================ */
+
+@keyframes floatIn3D {
+    from {
+        opacity: 0;
+        transform: translateZ(-100px) rotateY(10deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0) rotateY(0deg);
+    }
+}
+
+/* Parallax backgrounds */
+.parallax-layer {
+    transition: transform 0.1s ease-out;
+}
+
+/* 3D perspective for sections */
+.container-fluid.position-relative {
+    perspective: 1000px;
+}
+
+.nlca-vision-band,
+.nlca-core-values-band {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+/* Depth shadows on cards */
+.service-item {
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-item:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(5deg);
+}
+
+/* ============================================================================
+   OPTION 7: COLOR & GRADIENT ANIMATIONS
+   ============================================================================ */
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes colorPulse {
+    0% {
+        color: var(--nlca-main);
+    }
+    50% {
+        color: var(--nlca-secondary);
+    }
+    100% {
+        color: var(--nlca-main);
+    }
+}
+
+/* Gradient animation for footer */
+.footer.bg-primary {
+    background: linear-gradient(-45deg, var(--nlca-main), #323a45, var(--nlca-secondary), #404c59);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+/* Button gradient on hover */
+.btn-primary {
+    background: linear-gradient(135deg, var(--nlca-secondary), #e0c574);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+    background-position: 100% 100%;
+}
+
+/* Icon color transitions */
+.fa-heart,
+[class*="fa-"],
+[class^="fas"] {
+    transition: color 0.3s ease;
+}
+
+.btn:hover .fa-heart,
+.btn:hover [class*="fa-"],
+.btn:hover [class^="fas"] {
+    color: #ff6b6b;
+}
+
+/* ============================================================================
+   OPTION 8: MICRO-INTERACTIONS & FEEDBACK
+   ============================================================================ */
+
+@keyframes glowFocus {
+    0% {
+        box-shadow: 0 0 5px rgba(224, 155, 52, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(224, 155, 52, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(224, 155, 52, 0.3);
+    }
+}
+
+@keyframes checkmarkBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Form input focus glow */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    transition: all 0.3s ease;
+    border-color: #ddd;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    animation: glowFocus 0.6s ease infinite;
+    border-color: var(--nlca-secondary);
+    outline: none;
+}
+
+/* Navigation animations removed for cleaner navbar */
+
+/* Loading animation for carousel */
+.owl-carousel {
+    opacity: 1;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.owl-item {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Tooltip animation */
+.tooltip {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+[data-bs-toggle="tooltip"]:hover::after {
+    content: attr(data-bs-title);
+    animation: fadeInUp 0.4s ease-out;
+}
+
+/* Success feedback for form submission */
+.form-success {
+    animation: successPulse 0.6s ease-out;
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* ============================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================================================ */
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    main#spa-main {
+        animation: fadeInUp 0.4s ease-out;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        animation: slideInLeft 0.4s ease-out;
+    }
+
+    /* Lighter parallax effect */
+    .parallax-layer {
+        transform: translateY(0) !important;
+    }
+
+    /* Simpler card animations */
+    .service-item:hover {
+        transform: translateY(-4px) scale(1.01) !important;
+    }
+
+    /* Disable some micro-interactions on mobile */
+    a.nav-link::after,
+    a.dropdown-item::after {
+        display: none;
+    }
+}
+
+/* ============================================================================
+   UTILITY CLASSES FOR ANIMATIONS
+   ============================================================================ */
+
+.animate-fade {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-in {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-lift {
+    animation: cardLift 0.5s ease-out forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-glow {
+    animation: glowFocus 0.6s ease infinite;
+}
+
+/* ============================================================================
+   HERO TYPEWRITER ANIMATION
+   ============================================================================ */
+
+@keyframes heroTypewriter {
+    from {
+        width: 0;
+        border-right: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        border-right: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        width: 100%;
+        border-right: 3px solid transparent;
+    }
+}
+
+@keyframes heroFadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.nlca-hero-title {
+    display: inline-block;
+    color: white;
+    margin-bottom: 0;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),
+        4px 4px 8px rgba(0, 0, 0, 0.6),
+        -1px -1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nlca-hero-title.animate-in {
+    animation: heroTypewriter 4s steps(50, end) forwards;
+}
+
+.nlca-hero-title.animate-out {
+    animation: heroFadeOut 0.5s ease-out forwards;
+}
+
+/* Stagger animations for list items */
+.stagger-item {
+    animation: fadeInUp 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0s; }
+.stagger-item:nth-child(2) { animation-delay: 0.1s; }
+.stagger-item:nth-child(3) { animation-delay: 0.2s; }
+.stagger-item:nth-child(4) { animation-delay: 0.3s; }
+.stagger-item:nth-child(5) { animation-delay: 0.4s; }
+.stagger-item:nth-child(6) { animation-delay: 0.5s; }
+.stagger-item:nth-child(n+7) { animation-delay: 0.6s; }

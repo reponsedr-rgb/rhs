@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Directory - Rusumo High School</title>
+    <meta name="description" content="Meet the dedicated staff and leadership team of Rusumo High School. Our team of experienced educators is committed to academic excellence and student development.">
+    
+    <!-- Favicon -->
+    <link href="../assets/img/RHS Logo edited.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Plusjakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/brand.css" rel="stylesheet">
+    <link href="../assets/css/animations.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="../index.html" wire:navigate.hover class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            
+                        <div>
+                            <img src="../assets/img/RHS Logo edited.jpg" alt="Rusumo High School" style="max-height:70px;">
+                            <p style="margin: 5px 0 0 0; font-size: 11px; color: #666; font-weight: 600;">Science, Conscience and Discipline</p>
+                        </div>
+                    </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="../index.html" wire:navigate.hover class="nav-item nav-link">Home</a>
+                
+                <!-- About Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="../our-school.html" wire:navigate.hover class="dropdown-item">Our School</a>
+                        <a href="../alumni/Alumni.html" wire:navigate.hover class="dropdown-item">Alumni</a>
+                    </div>
+                </div>
+
+                <!-- Academics & Admissions Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="../our-programs/Program.html" wire:navigate.hover class="dropdown-item">Programs</a>
+                        <a href="../academic/Fees.html" wire:navigate.hover class="dropdown-item">Fees</a>
+                        <a href="../admissions/Admissions.html" wire:navigate.hover class="dropdown-item">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Campus Life Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Campus Life</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="../our-facilities/Facilities.html" wire:navigate.hover class="dropdown-item">Facilities</a>
+                        <a href="../activities/Activities.html" wire:navigate.hover class="dropdown-item">School Activities</a>
+                        <a href="Staff.html" wire:navigate.hover class="dropdown-item active">Staff Directory</a>
+                    </div>
+                </div>
+
+                <a href="../gallery/Gallery.html" wire:navigate.hover class="nav-item nav-link">Gallery</a>
+            </div>
+            <div class="d-flex align-items-stretch align-items-lg-center px-4 px-lg-3 pb-4 pb-lg-0 ms-lg-2">
+                <a href="../Contact/Contact.html" wire:navigate.hover class="btn btn-primary py-3 px-lg-4">Contact Us<i class="fa fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header -->
+    <div class="container-fluid nlca-detail-hero nlca-detail-hero-img position-relative py-5" style="background-image: url('../assets/img/RHS 2.jpg'); background-size: cover; background-position: center; min-height: 300px; display: flex; align-items: center;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 small">
+                            <li class="breadcrumb-item"><a href="../index.html" wire:navigate.hover>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Staff Directory</li>
+                        </ol>
+                    </nav>
+                    <h1 class="h2 nlca-section-title text-start text-white mb-4">Our Staff</h1>
+                    <p class="text-white lead">Meet our dedicated team of educators committed to excellence</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container-xxl nlca-detail-main py-5">
+        <div class="container">
+
+            <!-- Leadership Section -->
+            <section class="mb-5 pb-4 border-bottom">
+                <h2 class="h3 nlca-section-title mb-4">
+                    <i class="fas fa-crown text-primary me-2"></i>School Leadership
+                </h2>
+                <p class="text-muted mb-4">Our leadership team provides strategic vision and ensures academic excellence across all programs.</p>
+                
+                <div class="row g-4">
+                    <!-- Principal -->
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-primary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 280px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Principal" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4">
+                                <h5 class="mb-1 fw-bold text-dark">Principal</h5>
+                                <p class="text-primary small mb-3">
+                                    <i class="fas fa-briefcase me-1"></i>School Head
+                                </p>
+                                <p class="text-muted small mb-3">
+                                    Leading Rusumo High School with vision, integrity, and commitment to academic excellence and student development.
+                                </p>
+                                <div class="staff-details small">
+                                    <p class="mb-2"><i class="fas fa-envelope text-success me-2"></i>Email: principal@rhs.rw</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deputy Principal - Academics -->
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-primary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 280px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Deputy Principal - Academics" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4">
+                                <h5 class="mb-1 fw-bold text-dark">Deputy Principal</h5>
+                                <p class="text-primary small mb-3">
+                                    <i class="fas fa-book me-1"></i>Academic Affairs
+                                </p>
+                                <p class="text-muted small mb-3">
+                                    Overseeing curriculum implementation, academic standards, and student performance across all programs.
+                                </p>
+                                <div class="staff-details small">
+                                    <p class="mb-2"><i class="fas fa-envelope text-success me-2"></i>Email: academics@rhs.rw</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deputy Principal - Discipline -->
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-primary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 280px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Deputy Principal - Discipline" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4">
+                                <h5 class="mb-1 fw-bold text-dark">Deputy Principal</h5>
+                                <p class="text-primary small mb-3">
+                                    <i class="fas fa-shield-alt me-1"></i>Discipline & Pastoral Care
+                                </p>
+                                <p class="text-muted small mb-3">
+                                    Ensuring school discipline, student welfare, pastoral guidance, and creating a safe learning environment.
+                                </p>
+                                <div class="staff-details small">
+                                    <p class="mb-2"><i class="fas fa-envelope text-success me-2"></i>Email: discipline@rhs.rw</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Departments Section -->
+            <section class="mb-5 pb-4 border-bottom">
+                <h2 class="h3 nlca-section-title mb-4">
+                    <i class="fas fa-book-open text-primary me-2"></i>Academic Departments
+                </h2>
+                <p class="text-muted mb-4">Our qualified educators provide comprehensive instruction across all subject areas.</p>
+
+                <!-- Sciences Department -->
+                <div class="mb-5">
+                    <h4 class="h5 mb-3 text-dark fw-bold">
+                        <i class="fas fa-flask text-info me-2"></i>Sciences Department
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-info border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Biology Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Biology Teacher</h6>
+                                    <p class="text-muted small">Sciences Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-info border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Chemistry Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Chemistry Teacher</h6>
+                                    <p class="text-muted small">Sciences Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-info border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Physics Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Physics Teacher</h6>
+                                    <p class="text-muted small">Sciences Department</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathematics Department -->
+                <div class="mb-5">
+                    <h4 class="h5 mb-3 text-dark fw-bold">
+                        <i class="fas fa-calculator text-success me-2"></i>Mathematics Department
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-success border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Head of Mathematics" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Head of Mathematics</h6>
+                                    <p class="text-muted small">Mathematics Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-success border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Mathematics Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Mathematics Teacher</h6>
+                                    <p class="text-muted small">Mathematics Department</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humanities Department -->
+                <div class="mb-5">
+                    <h4 class="h5 mb-3 text-dark fw-bold">
+                        <i class="fas fa-globe text-warning me-2"></i>Humanities Department
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-warning border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="English Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">English Teacher</h6>
+                                    <p class="text-muted small">Humanities Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-warning border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="History & Civics Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">History & Civics Teacher</h6>
+                                    <p class="text-muted small">Humanities Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-warning border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Geography Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Geography Teacher</h6>
+                                    <p class="text-muted small">Humanities Department</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages Department -->
+                <div class="mb-5">
+                    <h4 class="h5 mb-3 text-dark fw-bold">
+                        <i class="fas fa-language text-danger me-2"></i>Languages Department
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-danger border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="French Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">French Teacher</h6>
+                                    <p class="text-muted small">Languages Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-danger border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Kinyarwanda Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Kinyarwanda Teacher</h6>
+                                    <p class="text-muted small">Languages Department</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business & ICT Department -->
+                <div class="mb-5">
+                    <h4 class="h5 mb-3 text-dark fw-bold">
+                        <i class="fas fa-laptop-code text-secondary me-2"></i>Business & ICT Department
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="ICT Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">ICT Teacher</h6>
+                                    <p class="text-muted small">Business & ICT Department</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                                <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Business Studies Teacher" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold text-dark">Business Studies Teacher</h6>
+                                    <p class="text-muted small">Business & ICT Department</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Staff Section -->
+            <section class="mb-5">
+                <h2 class="h3 nlca-section-title mb-4">
+                    <i class="fas fa-users text-primary me-2"></i>Support Staff
+                </h2>
+                <p class="text-muted mb-4">Our administrative and support team ensures smooth school operations and student services.</p>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Registrar" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-3">
+                                <h6 class="mb-1 fw-bold text-dark">Registrar</h6>
+                                <p class="text-muted small">Administrative Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Librarian" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-3">
+                                <h6 class="mb-1 fw-bold text-dark">Librarian</h6>
+                                <p class="text-muted small">Library Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="School Nurse" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-3">
+                                <h6 class="mb-1 fw-bold text-dark">School Nurse</h6>
+                                <p class="text-muted small">Health & Wellness</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="Counselor" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-3">
+                                <h6 class="mb-1 fw-bold text-dark">School Counselor</h6>
+                                <p class="text-muted small">Pastoral Care</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="staff-card h-100 bg-white rounded-4 shadow-sm overflow-hidden border-top border-secondary border-4 transition">
+                            <div class="staff-image-wrapper overflow-hidden" style="height: 240px; background: #f8f9fa;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541" alt="IT Technician" class="w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-3">
+                                <h6 class="mb-1 fw-bold text-dark">IT Technician</h6>
+                                <p class="text-muted small">Technology Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer Start -->
+    <footer class="nlca-footer container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-4 py-lg-5">
+            <div class="row g-4 g-lg-5 align-items-start">
+                <div class="col-lg-4 col-md-6">
+                    <div class="nlca-footer-brand">
+                        <img src="../assets/img/RHS Logo edited.jpg" alt="Rusumo High School" class="nlca-footer-logo img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h2 class="nlca-footer-heading">Rusumo High School</h2>
+                    <p class="nlca-footer-kicker mb-3">Quality Education & Excellence</p>
+                    <nav class="nlca-footer-nav" aria-label="School information">
+                        <ul class="list-unstyled nlca-footer-schools mb-0">
+                            <li><a class="nlca-footer-link" href="../our-school.html" target="_blank" rel="noopener noreferrer">About RHS</a></li>
+                            <li><a class="nlca-footer-link" href="../our-programs/Program.html" target="_blank" rel="noopener noreferrer">Our Programs</a></li>
+                            <li><a class="nlca-footer-link" href="../our-facilities/Facilities.html" target="_blank" rel="noopener noreferrer">Facilities</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h2 class="nlca-footer-heading">Get in touch</h2>
+                    <ul class="list-unstyled nlca-footer-contact mb-0">
+                        <li class="nlca-footer-contact-row">
+                            <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-map-marker-alt"></i></span>
+                            <span class="nlca-footer-contact-text">Kayonza</span>
+                        </li>
+                        <li class="nlca-footer-contact-row">
+                            <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-phone-alt"></i></span>
+                            <a class="nlca-footer-contact-text" href="tel:+250796315374">+250796315374</a>
+                        </li>
+                        <li class="nlca-footer-contact-row">
+                            <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-envelope"></i></span>
+                            <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.rw">info@rusumohighschool.rw</a>
+                        </li>
+                    </ul>
+                    <div class="nlca-footer-social d-flex flex-wrap gap-2 mt-4 align-items-center">
+                        <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/250796315374" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a class="nlca-footer-social-btn" href="https://www.facebook.com/rusumohighschool" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="nlca-footer-social-btn" href="https://www.instagram.com/rusumohighschool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nlca-footer-bar">
+            <div class="container">
+                <div class="copyright py-4">
+                    <div class="row align-items-center gy-2">
+                        <div class="col-md-6 text-center text-md-start">
+                            <span class="nlca-footer-copy">&copy; 2026 – <a href="../index.html" wire:navigate>Rusumo High School</a>. All rights reserved.</span>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/250796315374">RD Solutions</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <a href="https://wa.me/250796315374" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp – tap to chat">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle nlca-back-to-top back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap%405.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/wow/wow.min.js"></script>
+    <script src="../assets/lib/easing/easing.min.js"></script>
+    <script src="../assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="../assets/lib/counterup/counterup.min.js"></script>
+    <script src="../assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../assets/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+
+    <!-- Hover Effect CSS -->
+    <style>
+        .staff-card {
+            transition: all 0.3s ease;
+        }
+        
+        .staff-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .staff-image-wrapper img {
+            transition: transform 0.3s ease;
+        }
+        
+        .staff-card:hover .staff-image-wrapper img {
+            transform: scale(1.05);
+        }
+    </style>
+
+</body>
+
+</html>

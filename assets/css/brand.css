@@ -1,0 +1,1561 @@
+/**
+ * NLCA brand — public site
+ * Main: #404c59 | Secondary: #e09b34 | Black/white accents
+ * Load after bootstrap.min.css and style.css
+ */
+:root {
+    --nlca-main: #404c59;
+    --nlca-secondary: #e09b34;
+    --primary: #404c59;
+    --blue: #e09b34;
+    --dark: #1a1a1a;
+}
+
+/* Bootstrap utility alignment */
+.bg-primary {
+    background-color: var(--nlca-main) !important;
+}
+
+.text-primary {
+    color: var(--nlca-main) !important;
+}
+
+.btn-primary {
+    background-color: var(--nlca-secondary) !important;
+    border-color: #c98a2e !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #c98a2e !important;
+    border-color: #b07d28 !important;
+    color: #ffffff !important;
+}
+
+.btn-secondary {
+    background-color: var(--nlca-main) !important;
+    border-color: var(--nlca-main) !important;
+    color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+    background-color: #323a45 !important;
+    border-color: #323a45 !important;
+}
+
+/* Navbar active / hover uses --primary (main) */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--nlca-main) !important;
+}
+
+/* Spinner */
+.spinner-grow.text-primary {
+    color: var(--nlca-secondary) !important;
+}
+
+/* Public header accent */
+.navbar.sticky-top.bg-white {
+    border-bottom: 3px solid var(--nlca-secondary);
+    box-shadow: 0 1px 0 rgba(64, 76, 89, 0.06);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(64, 76, 89, 0.2);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23404c59' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Footer primary background uses main brand */
+.footer.bg-primary {
+    background: linear-gradient(135deg, var(--nlca-main) 0%, #323a45 100%) !important;
+}
+
+/* ===== PAGE LAYOUT FIXES ===== */
+/* Ensure footer stays at bottom of page */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content area grows to fill available space */
+main#spa-main,
+main {
+    flex: 1;
+    width: 100%;
+}
+
+/* Make footer sticky to bottom using flexbox */
+.nlca-footer {
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Ensure WhatsApp button and back-to-top are fixed, not affecting layout */
+.nlca-float-wa,
+.nlca-back-to-top {
+    position: fixed !important;
+    z-index: 1000;
+}
+
+/* ===== FOOTER STYLING ===== */
+/* Footer layout & polish (see resources/views/frontend/includes/footer.blade.php) */
+.nlca-footer {
+    position: relative;
+    border-top: 3px solid rgba(224, 155, 52, 0.35);
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.nlca-footer-brand {
+    display: inline-block;
+    max-width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.nlca-footer-logo {
+    display: block;
+    max-height: 168px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.nlca-footer h2.nlca-footer-heading {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #f1f5f9 !important;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.nlca-footer-heading::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin-top: 0.65rem;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--nlca-secondary), rgba(240, 197, 107, 0.85));
+}
+
+.nlca-footer-kicker {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55) !important;
+    line-height: 1.4;
+    text-align: left !important;
+}
+
+.nlca-footer-nav {
+    display: block;
+}
+
+.nlca-footer-schools li {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nlca-footer-schools li:last-child {
+    border-bottom: none;
+}
+
+.nlca-footer-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.65rem 0.35rem 0.65rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: #f8fafc !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.nlca-footer-link::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-top: 0.2rem;
+    color: var(--nlca-secondary);
+    flex-shrink: 0;
+}
+
+.nlca-footer-link:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(3px);
+}
+
+.nlca-footer-contact {
+    padding: 0;
+}
+
+.nlca-footer-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
+}
+
+.nlca-footer-contact-row:last-child {
+    margin-bottom: 0;
+}
+
+.nlca-footer-contact-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(224, 155, 52, 0.15);
+    color: var(--nlca-secondary);
+    font-size: 0.95rem;
+}
+
+.nlca-footer-contact-text {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.15rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: #f1f5f9 !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+a.nlca-footer-contact-text:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(224, 155, 52, 0.85) !important;
+}
+
+.nlca-footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.nlca-footer-social-btn:hover {
+    background: var(--nlca-secondary);
+    border-color: #c98a2e;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.nlca-footer-social-btn--wa {
+    background: rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.55);
+    color: #25d366;
+}
+
+.nlca-footer-social-btn--wa:hover {
+    background: #25d366;
+    border-color: #1ebe5d;
+    color: #fff;
+}
+
+/* Floating WhatsApp (bottom-left; back-to-top stays bottom-right) */
+.nlca-float-wa {
+    position: fixed;
+    left: max(18px, env(safe-area-inset-left, 0px));
+    bottom: max(22px, env(safe-area-inset-bottom, 0px));
+    z-index: 98;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.85rem;
+    color: #fff !important;
+    background: #25d366;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+    text-decoration: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nlca-float-wa:hover {
+    color: #fff !important;
+    transform: scale(1.06);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.32);
+}
+
+.nlca-float-wa:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.65);
+    outline-offset: 3px;
+}
+
+.nlca-footer-bar {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.nlca-footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.9rem;
+}
+
+.nlca-footer .copyright .nlca-footer-copy a,
+.nlca-footer .copyright .nlca-footer-credit a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nlca-footer .copyright .nlca-footer-copy a:hover,
+.nlca-footer .copyright .nlca-footer-credit a:hover {
+    color: var(--nlca-secondary);
+    border-bottom-color: rgba(224, 155, 52, 0.6);
+}
+
+.nlca-back-to-top {
+    box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.nlca-back-to-top:hover {
+    transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nlca-footer-link,
+    .nlca-footer-social-btn,
+    .nlca-back-to-top,
+    .nlca-float-wa {
+        transition: none;
+    }
+
+    .nlca-footer-link:hover {
+        transform: none;
+    }
+
+    .nlca-footer-social-btn:hover {
+        transform: none;
+    }
+
+    .nlca-back-to-top:hover {
+        transform: none;
+    }
+
+    .nlca-float-wa:hover {
+        transform: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .nlca-float-wa {
+        left: 28px;
+        bottom: 44px;
+    }
+}
+
+/* ---------- Landing page UX ---------- */
+
+.nlca-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+@media (min-width: 992px) {
+    .nlca-section {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+}
+
+.nlca-section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem !important;
+    color: var(--nlca-main);
+    font-weight: 700;
+}
+
+.nlca-section-title::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--nlca-secondary), #f0c56b);
+}
+
+.nlca-section-title.text-start::after {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Hero carousel: Owl uses Animate.css fadeIn/fadeOut (see main.js) — clip during crossfade */
+.header-carousel .owl-stage-outer {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.header-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Hero / carousel readability */
+.nlca-hero-slide {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+@media (min-width: 768px) {
+    .nlca-hero-slide {
+        min-height: 420px;
+    }
+}
+
+.nlca-hero-slide > .nlca-hero-img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transform-origin: center center;
+}
+
+/* Gentle zoom on the active slide (Ken Burns–style) */
+.header-carousel .owl-item.active .nlca-hero-img {
+    animation: nlca-hero-kenburns 14s ease-out forwards;
+}
+
+@keyframes nlca-hero-kenburns {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.07);
+    }
+}
+
+.nlca-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(26, 26, 26, 0.75) 0%,
+        rgba(64, 76, 89, 0.35) 45%,
+        rgba(64, 76, 89, 0.2) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.nlca-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.nlca-hero-text-block {
+    max-width: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0 0.25rem;
+}
+
+/* Hero copy must stay visible without relying on JS (Owl clones / init timing can skip the animate hook). */
+.nlca-hero-text-block .nlca-hero-kicker,
+.nlca-hero-text-block .nlca-hero-title {
+    opacity: 1;
+    transform: none;
+}
+
+/* Subtle nudge when JS marks the active slide (optional enhancement) */
+.nlca-hero-text-block.nlca-hero-animate-in .nlca-hero-kicker {
+    animation: nlca-hero-nudge 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.nlca-hero-text-block.nlca-hero-animate-in .nlca-hero-title {
+    animation: nlca-hero-nudge 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes nlca-hero-nudge {
+    from {
+        transform: translateY(0.65rem);
+        opacity: 0.92;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header-carousel .owl-item.active .nlca-hero-img {
+        animation: none;
+    }
+
+    .nlca-hero-text-block.nlca-hero-animate-in .nlca-hero-kicker,
+    .nlca-hero-text-block.nlca-hero-animate-in .nlca-hero-title {
+        animation: none;
+    }
+}
+
+.nlca-hero-kicker {
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+}
+
+.nlca-hero-title {
+    font-size: clamp(1.65rem, 4.2vw, 2.65rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-wrap: balance;
+    text-shadow: 0 2px 28px rgba(0, 0, 0, 0.5);
+}
+
+.nlca-hero-content .display-4 {
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.nlca-hero-fallback {
+    min-height: 360px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--nlca-main) 0%, #2d3540 55%, #1e252d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: #fff;
+}
+
+.nlca-hero-fallback h1 {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    max-width: 20ch;
+    margin: 0 auto 0.75rem;
+}
+
+.nlca-hero-fallback p {
+    opacity: 0.92;
+    max-width: 36ch;
+    margin: 0 auto;
+}
+
+/* Program / choose-us cards */
+.nlca-card-grid .service-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(64, 76, 89, 0.08);
+    border: 1px solid rgba(64, 76, 89, 0.06);
+    height: 100%;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.nlca-card-grid .service-item:hover {
+    box-shadow: 0 14px 40px rgba(64, 76, 89, 0.12);
+    transform: translateY(-3px);
+}
+
+.nlca-card-grid .service-item .p-4 h4 {
+    color: var(--nlca-main);
+    font-weight: 600;
+}
+
+/* Facilities */
+.nlca-facility-card .btn-primary {
+    min-width: 9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.nlca-facility-card .portfolio-overlay .btn {
+    border-radius: 999px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Core values block */
+.nlca-core-band {
+    background: #fafbfc;
+    border-radius: 12px;
+    border: 1px solid rgba(64, 76, 89, 0.08);
+}
+
+.nlca-value-pill {
+    font-size: 1rem;
+    line-height: 1.45;
+    padding: 0.35rem 0 0.35rem 1.5rem;
+    position: relative;
+    color: #333;
+}
+
+.nlca-value-pill::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--nlca-secondary);
+    box-shadow: 0 0 0 3px rgba(224, 155, 52, 0.25);
+}
+
+/* Core values — full-bleed band (matches mission/vision treatment) */
+.nlca-core-values-band {
+    position: relative;
+    min-height: clamp(22rem, 62vh, 42rem);
+}
+
+@media (min-width: 992px) {
+    .nlca-core-values-band {
+        min-height: clamp(26rem, 70vh, 50rem);
+    }
+}
+
+.nlca-core-values-overlay {
+    background: linear-gradient(
+        165deg,
+        rgba(12, 14, 18, 0.88) 0%,
+        rgba(40, 48, 58, 0.82) 42%,
+        rgba(64, 76, 89, 0.62) 100%
+    ) !important;
+}
+
+.nlca-core-values-inner {
+    z-index: 2;
+}
+
+.nlca-core-values-band .section-title,
+.nlca-core-values-band h1,
+.nlca-core-values-band h2,
+.nlca-core-values-heading {
+    color: #fff !important;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 28px rgba(0, 0, 0, 0.55);
+}
+
+.nlca-core-values-heading {
+    display: block;
+}
+
+.nlca-core-values-lead {
+    opacity: 0.92;
+}
+
+.nlca-core-values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 0.25rem;
+}
+
+@media (min-width: 576px) {
+    .nlca-core-values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .nlca-core-values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.15rem;
+    }
+}
+
+.nlca-core-values-item {
+    min-width: 0;
+}
+
+.nlca-core-values-accent {
+    width: 4rem;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--nlca-secondary), #f0c56b);
+}
+
+.nlca-value-pill--hero {
+    font-size: clamp(0.95rem, 1vw + 0.85rem, 1.05rem);
+    line-height: 1.4;
+    padding: 0.9rem 1rem !important;
+    margin: 0 !important;
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 3.35rem;
+    width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.nlca-core-values-band .nlca-value-pill--hero::before {
+    content: none !important;
+    display: none !important;
+}
+
+.nlca-value-pill--hero:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(224, 155, 52, 0.75);
+}
+
+.nlca-school-section .nlca-school-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Visit / map split */
+.nlca-visit-lead {
+    max-width: 36rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.nlca-visit-split > [class*="col-"] {
+    min-height: 0;
+}
+
+.nlca-visit-panel {
+    background: linear-gradient(165deg, var(--nlca-main) 0%, #2d3540 55%, #323a45 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 12px 40px rgba(64, 76, 89, 0.12);
+}
+
+.nlca-visit-panel__head {
+    margin-bottom: 1.25rem;
+}
+
+.nlca-visit-panel__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.nlca-visit-panel__school {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.nlca-visit-panel__empty {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.nlca-visit-panel .nlca-visit-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(224, 155, 52, 0.18);
+    color: var(--nlca-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
+}
+
+.nlca-visit-contact {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.nlca-visit-contact__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.nlca-visit-contact__icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--nlca-secondary);
+    font-size: 0.9rem;
+}
+
+.nlca-visit-contact__text,
+.nlca-visit-contact__link {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.2rem;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.nlca-visit-contact__link {
+    text-decoration: none;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.nlca-visit-contact__link:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.nlca-visit-panel__cta {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nlca-map-embed {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(64, 76, 89, 0.14);
+    border: 1px solid rgba(64, 76, 89, 0.1);
+    background: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+}
+
+.nlca-map-iframe {
+    display: block;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 280px;
+    border: 0;
+}
+
+@media (min-width: 992px) {
+    .nlca-visit-split {
+        align-items: stretch;
+    }
+
+    .nlca-visit-split > [class*="col-"] {
+        display: flex;
+    }
+
+    .nlca-visit-panel,
+    .nlca-map-embed {
+        min-height: 420px;
+    }
+
+    .nlca-map-iframe {
+        min-height: 420px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .nlca-map-iframe {
+        min-height: 300px;
+    }
+    
+    /* Mobile Navbar Container */
+    .navbar {
+        padding: 0.5rem 1rem !important;
+        background-color: #ffffff;
+        position: relative;
+    }
+    
+    .navbar-brand {
+        flex: 0 0 auto;
+        padding: 0 !important;
+        margin-right: 0;
+    }
+    
+    .navbar-brand img {
+        max-height: 50px;
+    }
+    
+    .navbar-brand p {
+        font-size: 9px !important;
+        margin: 2px 0 0 0 !important;
+    }
+    
+    /* Hamburger Toggle Button - Accessible & Mobile-Friendly */
+    .navbar-toggler {
+        /* WCAG 2.1 Level AAA: 44x44px minimum touch target */
+        min-width: 44px !important;
+        min-height: 44px !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        order: 2;
+        margin-left: auto !important;
+        margin-right: 0.5rem !important;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1001;
+        cursor: pointer;
+        transition: background-color 0.2s ease, opacity 0.2s ease;
+    }
+    
+    .navbar-toggler:hover {
+        background-color: rgba(224, 155, 52, 0.08) !important;
+    }
+    
+    .navbar-toggler:active {
+        background-color: rgba(224, 155, 52, 0.15) !important;
+    }
+    
+    .navbar-toggler:focus {
+        outline: 2px solid var(--nlca-secondary) !important;
+        outline-offset: 2px !important;
+        box-shadow: 0 0 0 4px rgba(224, 155, 52, 0.2) !important;
+    }
+    
+    .navbar-toggler:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    
+    .navbar-toggler-icon {
+        display: inline-block !important;
+        width: 24px !important;
+        height: 24px !important;
+        vertical-align: middle;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 100% !important;
+    }
+    
+    /* Mobile Collapse Menu Container */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        border-top: 1px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    .navbar-collapse.show {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+    
+    /* Navigation List */
+    .navbar-nav {
+        flex-direction: column;
+        padding: 1rem 0 !important;
+        margin: 0;
+    }
+    
+    /* Navigation Links */
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1.5rem !important;
+        margin: 0 !important;
+        font-size: 14px;
+        border-bottom: 1px solid #f0f0f0;
+        color: var(--dark) !important;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        background-color: #f5f5f5;
+        color: var(--nlca-secondary) !important;
+    }
+    
+    .navbar-nav .nav-link::after {
+        content: none !important;
+    }
+    
+    /* Dropdown Toggle Indicator */
+    .navbar-nav .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: auto;
+        vertical-align: middle;
+        content: "";
+        border-top: 0.3em solid currentColor;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+    
+    /* Dropdown Menus on Mobile */
+    .navbar-nav .dropdown-menu {
+        background-color: #fafafa !important;
+        border: none !important;
+        border-left: 3px solid var(--nlca-secondary);
+        padding: 0 !important;
+        margin: 0 !important;
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        display: none !important;
+    }
+    
+    .navbar-nav .dropdown-menu.show {
+        display: block !important;
+    }
+    
+    .navbar-nav .show > .dropdown-menu {
+        display: block !important;
+    }
+    
+    /* Dropdown Items */
+    .navbar-nav .dropdown-item {
+        padding: 0.75rem 2rem !important;
+        font-size: 13px;
+        color: var(--dark) !important;
+        border-bottom: 1px solid #f0f0f0;
+        display: block;
+    }
+    
+    .navbar-nav .dropdown-item:hover,
+    .navbar-nav .dropdown-item.active {
+        background-color: rgba(224, 155, 52, 0.1);
+        color: var(--nlca-secondary) !important;
+    }
+    
+    /* Button Container in Mobile Menu */
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .navbar-collapse .btn-primary {
+        width: 100%;
+        margin: 0 !important;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem !important;
+    }
+    
+    .navbar-brand img {
+        max-height: 45px;
+    }
+    
+    .navbar-brand p {
+        font-size: 8px !important;
+    }
+    
+    /* Keep 44x44px touch target even on small phones */
+    .navbar-toggler {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        margin-right: 0.5rem !important;
+    }
+    
+    .navbar-toggler-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 13px !important;
+        padding: 0.65rem 1.25rem !important;
+    }
+    
+    .navbar-nav .dropdown-item {
+        font-size: 12px !important;
+        padding: 0.65rem 1.75rem !important;
+    }
+    
+    .navbar-collapse {
+        max-height: calc(100vh - 70px);
+    }
+    
+    /* Optimize hero image for phones */
+    .container-fluid.page-header {
+        height: clamp(150px, 30vh, 250px) !important;
+        min-height: 150px;
+    }
+}
+
+/* Vision / mission band (about partial) — full-bleed + parallax bg via JS */
+.nlca-vision-bleed {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.nlca-vision-band {
+    position: relative;
+    /* Mobile: tall enough to show the photo + text; avoids feeling cramped */
+    min-height: 78vh;
+    min-height: 78dvh;
+}
+
+@media (min-width: 992px) {
+    /* Desktop: full viewport — image covers full screen width × height of this section */
+    .nlca-vision-band {
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+    }
+}
+
+.nlca-vision-parallax-bg {
+    --nlca-parallax-y: 0px;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    will-change: transform;
+    transform-origin: center center;
+    pointer-events: none;
+}
+
+/* Mobile: show more of the image; parallax offset applied via --nlca-parallax-y (JS) */
+@media (max-width: 991.98px) {
+    .nlca-vision-parallax-bg {
+        top: -12%;
+        left: -5%;
+        width: 110%;
+        height: 124%;
+        transform: translate3d(0, var(--nlca-parallax-y), 0) scale(1.06);
+    }
+}
+
+@media (min-width: 992px) {
+    .nlca-vision-parallax-bg {
+        top: -15%;
+        left: -5%;
+        width: 110%;
+        height: 130%;
+        transform: translate3d(0, var(--nlca-parallax-y), 0) scale(1.08);
+    }
+}
+
+.nlca-vision-overlay {
+    z-index: 1;
+    background-color: rgba(64, 76, 89, 0.82);
+}
+
+@media (min-width: 992px) {
+    .nlca-vision-overlay {
+        background-color: rgba(64, 76, 89, 0.88);
+    }
+}
+
+.nlca-vision-inner {
+    z-index: 2;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3.25rem !important;
+    padding-bottom: 3.25rem !important;
+}
+
+@media (min-width: 992px) {
+    .nlca-vision-inner {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+}
+
+.nlca-vision-heading {
+    color: var(--nlca-secondary);
+}
+
+.nlca-vision-body {
+    font-size: clamp(1rem, 1.05vw + 0.9rem, 1.125rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nlca-vision-parallax-bg {
+        --nlca-parallax-y: 0px !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        transform: none !important;
+        will-change: auto;
+    }
+}
+
+/* Program / facility detail — 60% gallery, 40% description (desktop) */
+.nlca-detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.nlca-detail-hero-wrap {
+    background: rgba(64, 76, 89, 0.06);
+}
+
+.nlca-detail-hero-img {
+    display: block;
+    max-height: min(70vh, 520px);
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 992px) {
+    .nlca-detail-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .nlca-detail-gallery-col {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .nlca-detail-desc-col {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .nlca-detail-hero-img {
+        max-height: min(75vh, 640px);
+    }
+}
+
+.nlca-detail-thumb {
+    width: 5.5rem;
+    height: 5.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    background: rgba(64, 76, 89, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nlca-detail-thumb.is-active {
+    outline: 3px solid var(--nlca-secondary);
+    outline-offset: 2px;
+    box-shadow: 0 4px 14px rgba(64, 76, 89, 0.2);
+}
+
+.nlca-detail-thumb:hover {
+    transform: translateY(-2px);
+}
+
+.nlca-detail-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nlca-detail-body {
+    line-height: 1.7;
+}
+
+.nlca-detail-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Header: login outline */
+.btn-nlca-outline {
+    color: var(--nlca-main) !important;
+    border: 2px solid var(--nlca-main) !important;
+    background: transparent !important;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.btn-nlca-outline:hover {
+    background: var(--nlca-main) !important;
+    color: #fff !important;
+}
+
+/* Upload hints on public forms — neutral, readable (not error red) */
+.nlca-upload-hint {
+    background: #f8f9fa;
+    border-left: 3px solid var(--nlca-secondary);
+    color: #495057;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    max-width: 42rem;
+}
+
+/* School activities listing */
+.nlca-activities-page .nlca-activity-card {
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.nlca-activities-page .nlca-activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.85rem 2.25rem rgba(64, 76, 89, 0.14) !important;
+}
+
+.nlca-activity-card-media {
+    overflow: hidden;
+}
+
+.nlca-activity-card-media img {
+    transition: transform 0.4s ease;
+}
+
+.nlca-activities-page .nlca-activity-card:hover .nlca-activity-card-media img {
+    transform: scale(1.04);
+}
+
+.nlca-share-strip .btn {
+    border-radius: 0.35rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nlca-activities-page .nlca-activity-card,
+    .nlca-activity-card-media img {
+        transition: none;
+    }
+
+    .nlca-activities-page .nlca-activity-card:hover {
+        transform: none;
+    }
+}
+
+/* Contact page */
+.nlca-contact-page {
+    background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 45%);
+}
+
+.nlca-contact-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(64, 76, 89, 0.08);
+    border: 1px solid rgba(64, 76, 89, 0.06);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.nlca-contact-card:hover {
+    box-shadow: 0 8px 32px rgba(64, 76, 89, 0.12);
+    transform: translateY(-3px);
+}
+
+.nlca-contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(224, 155, 52, 0.14);
+    color: var(--nlca-secondary);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.nlca-contact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6c757d;
+    margin-bottom: 0.35rem;
+}
+
+.nlca-contact-value {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--nlca-main);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.45;
+}
+
+.nlca-contact-value a {
+    color: var(--nlca-main);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nlca-contact-value a:hover {
+    color: var(--nlca-secondary);
+}
+
+.nlca-contact-map-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(64, 76, 89, 0.1);
+    background: #e9ecef;
+}
+
+.nlca-contact-map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: 0;
+}
+
+@media (max-width: 767.98px) {
+    .nlca-contact-map-wrap iframe {
+        height: 260px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container-fluid.page-header {
+        height: clamp(200px, 35vh, 300px) !important;
+        min-height: 200px;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-color: white !important;
+    }
+
+    .nlca-detail-hero-wrap[style*="height: 400px"] {
+        height: 260px !important;
+    }
+
+    .nlca-hero-slide[style*="height: 600px"] {
+        height: clamp(280px, 48vh, 380px) !important;
+    }
+
+    .page-header[style*="background-attachment: fixed"] {
+        background-attachment: scroll !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nlca-contact-card {
+        transition: none;
+    }
+
+    .nlca-contact-card:hover {
+        transform: none;
+    }
+}
+
+/* Registration / enquiry form (shared partial) */
+.nlca-application-form .form-label {
+    font-weight: 600;
+    color: var(--nlca-main);
+    font-size: 0.9rem;
+}
+
+.nlca-application-form .form-control:focus,
+.nlca-application-form .form-select:focus {
+    border-color: rgba(224, 155, 52, 0.65);
+    box-shadow: 0 0 0 0.2rem rgba(224, 155, 52, 0.15);
+}
+
+.nlca-application-form .form-text {
+    font-size: 0.8rem;
+}
+
+.nlca-register-aside .nlca-section-title::after {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.nlca-register-contact a {
+    color: var(--nlca-main);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.nlca-register-contact a:hover {
+    color: var(--nlca-secondary);
+}
+
+.nlca-register-contact__icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(224, 155, 52, 0.14);
+    color: var(--nlca-secondary);
+}
+
+.nlca-contact-form-row .nlca-application-form {
+    margin-top: 0;
+}
+
+@media (max-width: 991.98px) {
+    .nlca-contact-form-row .nlca-application-form {
+        margin-top: 0.5rem;
+    }
+}
