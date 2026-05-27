@@ -69,6 +69,13 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23404c59' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Ensure the hamburger only shows on mobile collapse breakpoints */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none !important;
+    }
+}
+
 /* Footer primary background uses main brand */
 .footer.bg-primary {
     background: linear-gradient(135deg, var(--nlca-main) 0%, #323a45 100%) !important;
@@ -963,6 +970,13 @@ a.nlca-footer-contact-text:hover {
         cursor: pointer;
         transition: background-color 0.2s ease, opacity 0.2s ease;
     }
+
+    /* Hide toggler by default on larger screens if custom CSS interferes */
+    @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-toggler {
+            display: none !important;
+        }
+    }
     
     .navbar-toggler:hover {
         background-color: rgba(224, 155, 52, 0.08) !important;
@@ -1067,6 +1081,21 @@ a.nlca-footer-contact-text:hover {
         width: 100% !important;
         box-shadow: none !important;
         display: none !important;
+    }
+
+    /* Lock the navbar for smaller screens so it's always accessible */
+    @media (max-width: 991.98px) {
+        .navbar.sticky-top {
+            position: fixed !important;
+            top: 0 !important;
+            width: 100%;
+            z-index: 1050;
+        }
+
+        /* Reserve vertical space so page content isn't covered by the fixed navbar */
+        body {
+            padding-top: 75px; /* matches navbar height used elsewhere */
+        }
     }
     
     .navbar-nav .dropdown-menu.show {

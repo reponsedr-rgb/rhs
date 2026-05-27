@@ -18,10 +18,8 @@
         var navbarCollapse = document.querySelector('#navbarCollapse');
         
         if (navbarToggler && navbarCollapse) {
-            // Ensure button is always visible and accessible
-            navbarToggler.style.display = 'flex';
-            navbarToggler.style.visibility = 'visible';
-            navbarToggler.style.opacity = '1';
+            // Allow Bootstrap and responsive CSS to control toggler visibility
+            // on large screens, and only show it when the navbar is collapsed.
             
             // Update aria-expanded attribute when collapse state changes
             var updateAriaExpanded = function() {
@@ -123,7 +121,19 @@
 
 
     // Sticky Navbar
+    // Only auto-hide/show on larger screens; keep visible on small screens for easy access
     $(window).scroll(function () {
+        var isLargeScreen = window.matchMedia('(min-width: 992px)').matches;
+
+        // On small screens keep the navbar visible (easier access).
+        if (!isLargeScreen) {
+            if ($(this).scrollTop() >= 0) {
+                $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+            }
+            return;
+        }
+
+        // On large screens allow the auto-hide behaviour when scrolled to top
         if ($(this).scrollTop() > 300) {
             $('.sticky-top').addClass('shadow-sm').css('top', '0px');
         } else {
