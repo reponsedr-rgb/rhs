@@ -12,61 +12,6 @@
     spinner();
     
     
-    // Mobile Menu Management - Bootstrap Collapse Integration with Accessibility
-    document.addEventListener('DOMContentLoaded', function() {
-        var navbarToggler = document.querySelector('.navbar-toggler');
-        var navbarCollapse = document.querySelector('#navbarCollapse');
-        
-        if (navbarToggler && navbarCollapse) {
-            // Allow Bootstrap and responsive CSS to control toggler visibility
-            // on large screens, and only show it when the navbar is collapsed.
-            
-            // Update aria-expanded attribute when collapse state changes
-            var updateAriaExpanded = function() {
-                var isShown = navbarCollapse.classList.contains('show');
-                navbarToggler.setAttribute('aria-expanded', isShown ? 'true' : 'false');
-            };
-            
-            // Listen for collapse events
-            navbarCollapse.addEventListener('show.bs.collapse', updateAriaExpanded);
-            navbarCollapse.addEventListener('hide.bs.collapse', updateAriaExpanded);
-            navbarCollapse.addEventListener('shown.bs.collapse', updateAriaExpanded);
-            navbarCollapse.addEventListener('hidden.bs.collapse', updateAriaExpanded);
-            
-            // Set initial state
-            updateAriaExpanded();
-            
-            // Close mobile menu when a non-dropdown navigation link is clicked
-            var directNavLinks = navbarCollapse.querySelectorAll('a.nav-link:not(.dropdown-toggle)');
-            directNavLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    // Only close if on mobile and menu is currently shown
-                    if (window.innerWidth <= 991 && navbarCollapse.classList.contains('show')) {
-                        navbarToggler.click(); // Trigger the toggle button
-                    }
-                });
-            });
-            
-            // Close mobile menu when a dropdown item is clicked
-            var dropdownItems = navbarCollapse.querySelectorAll('.dropdown-item');
-            dropdownItems.forEach(function(item) {
-                item.addEventListener('click', function() {
-                    if (window.innerWidth <= 991 && navbarCollapse.classList.contains('show')) {
-                        navbarToggler.click(); // Trigger the toggle button
-                    }
-                });
-            });
-            
-            // Keyboard accessibility: Escape key to close menu
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape' && window.innerWidth <= 991 && navbarCollapse.classList.contains('show')) {
-                    navbarToggler.click();
-                    navbarToggler.focus(); // Return focus to toggle button
-                }
-            });
-        }
-    });
-    
     // Hero Text Typewriter Cycling Animation
     var heroTexts = [
         "Nothing is Impossible",
@@ -293,26 +238,9 @@
         }
         if (hasBootstrapCollapse) {
             bootstrap.Collapse.getOrCreateInstance(collapseEl).hide();
+            return;
         }
         setCollapseState(nav, false);
-    }
-
-    function toggleNavbarCollapse(toggler) {
-        var nav = toggler.closest(".navbar");
-        if (!nav) {
-            return;
-        }
-        var target = toggler.getAttribute("data-bs-target");
-        var collapseEl = target ? document.querySelector(target) : getNavCollapse(nav);
-        if (!collapseEl) {
-            return;
-        }
-        var willOpen = !collapseEl.classList.contains("show");
-        if (hasBootstrapCollapse) {
-            bootstrap.Collapse.getOrCreateInstance(collapseEl).toggle();
-        }
-        // Hard fallback: enforce visible state even if Bootstrap handlers fail.
-        setCollapseState(nav, willOpen);
     }
 
     function closeOtherDropdowns(nav, exceptToggle) {
@@ -334,13 +262,6 @@
     }
 
     document.addEventListener("click", function (e) {
-        var toggler = e.target.closest(".navbar .navbar-toggler");
-        if (toggler && isMobileNav()) {
-            e.preventDefault();
-            toggleNavbarCollapse(toggler);
-            return;
-        }
-
         var toggle = e.target.closest(".navbar .dropdown-toggle");
         if (toggle && isMobileNav()) {
             e.preventDefault();
