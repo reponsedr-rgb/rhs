@@ -238,9 +238,26 @@
         }
         if (hasBootstrapCollapse) {
             bootstrap.Collapse.getOrCreateInstance(collapseEl).hide();
-            return;
         }
         setCollapseState(nav, false);
+    }
+
+    function toggleNavbarCollapse(toggler) {
+        var nav = toggler.closest(".navbar");
+        if (!nav) {
+            return;
+        }
+        var target = toggler.getAttribute("data-bs-target");
+        var collapseEl = target ? document.querySelector(target) : getNavCollapse(nav);
+        if (!collapseEl) {
+            return;
+        }
+        if (hasBootstrapCollapse) {
+            bootstrap.Collapse.getOrCreateInstance(collapseEl).toggle();
+        } else {
+            var willOpen = !collapseEl.classList.contains("show");
+            setCollapseState(nav, willOpen);
+        }
     }
 
     function closeOtherDropdowns(nav, exceptToggle) {
@@ -262,6 +279,13 @@
     }
 
     document.addEventListener("click", function (e) {
+        var toggler = e.target.closest(".navbar .navbar-toggler");
+        if (toggler && isMobileNav()) {
+            e.preventDefault();
+            toggleNavbarCollapse(toggler);
+            return;
+        }
+
         var toggle = e.target.closest(".navbar .dropdown-toggle");
         if (toggle && isMobileNav()) {
             e.preventDefault();
