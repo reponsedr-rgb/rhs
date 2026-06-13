@@ -254,9 +254,6 @@ If you need help with repository operations, contact the maintainer listed in th
 ---
 
 ## 14) License
-
-This repository does not include a license file by default. Add a `LICENSE` (e.g., MIT) for clarity. Example:
-
 ```
 MIT License
 Copyright (c) 2026 Rusumo High School
