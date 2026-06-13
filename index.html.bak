@@ -2,20 +2,6 @@
 <html lang="en">
     
 <head>
-    <script type=\"application/ld+json\">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rusumohighschool.org/"}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNQVXH2VSV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);} 
-  gtag('js', new Date());
-  gtag('config', 'G-PNQVXH2VSV');
-</script>
-<!-- End GA4 -->
-
-    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-    <link rel=\"preload\" href=\"assets/img/hero.jpg\" as=\"image\">
-    <link rel=\"preload\" href=\"assets/css/style.css\" as=\"style\" onload=\"this.rel='stylesheet'\">
-    <noscript><link rel=\"stylesheet\" href=\"assets/css/style.css\"></noscript>
         <meta charset="utf-8">
         <title>Rusumo High School (RHS) | Official Website</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -52,7 +38,7 @@
                 "@type": "ContactPoint",
                 "telephone": "+250788871560",
                 "contactType": "Admissions",
-                "email": "info@rusumohighschool.org"
+                "email": "info@rusumohighschool.rw"
             }],
             "address": {
                 "@type": "PostalAddress",
@@ -515,11 +501,11 @@ The success of the O' level section paves way for the Advanced Level (A level) w
                                 </li>
                                                                                         <li class="nlca-visit-contact__row">
                                     <span class="nlca-visit-contact__icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
-                                    <a class="nlca-visit-contact__link" href="tel:0788871560" onclick="gtag('event','phone_click',{'phone':'0788871560'})">0788871560</a>
+                                    <a class="nlca-visit-contact__link" href="tel:0788871560">0788871560</a>
                                 </li>
                                                                                         <li class="nlca-visit-contact__row">
                                     <span class="nlca-visit-contact__icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
-                                    <a class="nlca-visit-contact__link nlca-visit-contact__link--email" href="mailto:info@rusumohighschool.org">info@rusumohighschool.org</a>
+                                    <a class="nlca-visit-contact__link nlca-visit-contact__link--email" href="mailto:info@rusumohighschool.rw">info@rusumohighschool.rw</a>
                                 </li>
                                                     </ul>
                                                                 <div class="nlca-visit-panel__cta">
@@ -567,15 +553,15 @@ The success of the O' level section paves way for the Advanced Level (A level) w
                                 </li>
                                                                                         <li class="nlca-footer-contact-row">
                                     <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-phone-alt"></i></span>
-                                    <a class="nlca-footer-contact-text" href="tel:0788871560" onclick="gtag('event','phone_click',{'phone':'0788871560'})">0788871560</a>
+                                    <a class="nlca-footer-contact-text" href="tel:0788871560">0788871560</a>
                                 </li>
                                                                                         <li class="nlca-footer-contact-row">
                                     <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-envelope"></i></span>
-                                    <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.org">info@rusumohighschool.org</a>
+                                    <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.rw">info@rusumohighschool.rw</a>
                                 </li>
                                                     </ul>
                         <div class="nlca-footer-social d-flex flex-wrap gap-2 mt-4 align-items-center">
-                                                            <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/0788871560" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                                                            <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/0788871560" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                                                                                         <a class="nlca-footer-social-btn" href="https://www.facebook.com/rusumohighschool" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                                                                                         <a class="nlca-footer-social-btn" href="https://www.instagram.com/rusumohighschool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                                                     </div>
@@ -590,7 +576,7 @@ The success of the O' level section paves way for the Advanced Level (A level) w
                             <span class="nlca-footer-copy">&copy; 2026 â€” <a href="index.html" wire:navigate>Rusumo High School</a>. All rights reserved.</span>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
-                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/0788871560" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})">RD Solutions</a></span>
+                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/0788871560">RD Solutions</a></span>
                         </div>
                     </div>
                 </div>
@@ -599,7 +585,7 @@ The success of the O' level section paves way for the Advanced Level (A level) w
     </footer>
     <!-- Footer End -->
 
-            <a href="https://wa.me/0788871560" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp â€” tap to chat" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})">
+            <a href="https://wa.me/0788871560" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp â€” tap to chat">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
     
@@ -618,8 +604,8 @@ The success of the O' level section paves way for the Advanced Level (A level) w
     <script src="assets/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 
     <!-- Livewire Scripts -->
 <script src="livewire/livewire9c26.js?id=6d832aed"   data-csrf="BdyosOKYl3epw9QfLnRYBczXpSr5RXX8UAuDSyfr" data-update-uri="/livewire/update" data-navigate-once="true"></script>

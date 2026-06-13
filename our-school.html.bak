@@ -1,22 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     
-<head>
-    <script type=\"application/ld+json\">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rusumohighschool.org/"}]}</script>
-    <!-- Google Analytics (GA4) - replace G-PNQVXH2VSV with your ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNQVXH2VSV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);} 
-  gtag('js', new Date());
-  gtag('config', 'G-PNQVXH2VSV');
-</script>
-<!-- End GA4 -->
-
-    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-    <link rel=\"preload\" href=\"assets/img/hero.jpg\" as=\"image\">
-    <link rel=\"preload\" href=\"assets/css/style.css\" as=\"style\" onload=\"this.rel='stylesheet'\">
-    <noscript><link rel=\"stylesheet\" href=\"assets/css/style.css\"></noscript><script type="application/ld+json">
+<head><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -27,7 +12,7 @@
     "@type": "ContactPoint",
     "telephone": "+250788871560",
     "contactType": "Admissions",
-    "email": "info@rusumohighschool.org"
+    "email": "info@rusumohighschool.rw"
   }],
   "address": {
     "@type": "PostalAddress",
@@ -111,13 +96,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" wire:navigate.hover class="nav-item nav-link active">Home</a>
+                <a href="index.html" wire:navigate.hover class="nav-item nav-link ">Home</a>
                 
                 <!-- About Dropdown -->
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
                     <div class="dropdown-menu m-0">
-                        <a href="our-school.html" wire:navigate.hover class="dropdown-item">Our School</a>
+                        <a href="our-school.html" wire:navigate.hover class="dropdown-item active">Our School</a>
                         <a href="alumni/Alumni.html" wire:navigate.hover class="dropdown-item">Alumni</a>
                     </div>
                 </div>
@@ -143,8 +128,8 @@
                     </div>
                 </div>
 
+                <a href="gallery/Gallery.html" wire:navigate.hover class="nav-item nav-link ">Gallery</a>
 
-                <a href="gallery/Gallery.html" wire:navigate.hover class="nav-item nav-link">Gallery</a>
             </div>
             <div class="d-flex align-items-stretch align-items-lg-center px-4 px-lg-3 pb-4 pb-lg-0 ms-lg-2">
                 <a href="Contact/Contact.html" wire:navigate.hover class="btn btn-primary py-3 px-lg-4">Contact Us<i class="fa fa-arrow-right ms-2"></i></a>
@@ -332,15 +317,15 @@
                                 </li>
                                                                                         <li class="nlca-footer-contact-row">
                                     <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-phone-alt"></i></span>
-                                    <a class="nlca-footer-contact-text" href="tel:0788871560" onclick="gtag('event','phone_click',{'phone':'0788871560'})">0788871560</a>
+                                    <a class="nlca-footer-contact-text" href="tel:0788871560">0788871560</a>
                                 </li>
                                                                                         <li class="nlca-footer-contact-row">
                                     <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-envelope"></i></span>
-                                    <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.org">info@rusumohighschool.org</a>
+                                    <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.rw">info@rusumohighschool.rw</a>
                                 </li>
                                                     </ul>
                         <div class="nlca-footer-social d-flex flex-wrap gap-2 mt-4 align-items-center">
-                                                            <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/0788871560" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                                                            <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/0788871560" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                                                                                         <a class="nlca-footer-social-btn" href="https://www.facebook.com/rusumohighschool" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                                                                                         <a class="nlca-footer-social-btn" href="https://www.instagram.com/rusumohighschool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                                                     </div>
@@ -355,7 +340,7 @@
                             <span class="nlca-footer-copy">&copy; 2026 â€” <a href="index.html" wire:navigate>Rusumo High School</a>. All rights reserved.</span>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
-                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/0788871560" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})">RD Solutions</a></span>
+                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/0788871560">RD Solutions</a></span>
                         </div>
                     </div>
                 </div>
@@ -364,7 +349,7 @@
     </footer>
     <!-- Footer End -->
 
-            <a href="https://wa.me/0788871560" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp â€” tap to chat" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})">
+            <a href="https://wa.me/0788871560" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp â€” tap to chat">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
     
@@ -383,8 +368,8 @@
     <script src="assets/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 
     <!-- Livewire Scripts -->
 <script src="livewire/livewire9c26.js?id=6d832aed"   data-csrf="BdyosOKYl3epw9QfLnRYBczXpSr5RXX8UAuDSyfr" data-update-uri="/livewire/update" data-navigate-once="true"></script>

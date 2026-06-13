@@ -1,21 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     
-<head>
-    <script type=\"application/ld+json\">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rusumohighschool.org/"},{"@type": "ListItem", "position": 2, "name": "Facilities", "item": "https://rusumohighschool.org/facilities/"}]}</script>
-    <!-- Google Analytics (GA4) - replace G-PNQVXH2VSV with your ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNQVXH2VSV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);} 
-  gtag('js', new Date());
-  gtag('config', 'G-PNQVXH2VSV');
-</script>
-<!-- End GA4 -->
-
-    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-    <link rel=\"preload\" href=\"assets/css/style.css\" as=\"style\" onload=\"this.rel='stylesheet'\">
-    <noscript><link rel=\"stylesheet\" href=\"assets/css/style.css\"></noscript><script type="application/ld+json">
+<head><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -26,7 +12,7 @@
     "@type": "ContactPoint",
     "telephone": "+250788871560",
     "contactType": "Admissions",
-    "email": "info@rusumohighschool.org"
+    "email": "info@rusumohighschool.rw"
   }],
   "address": {
     "@type": "PostalAddress",
@@ -36,21 +22,21 @@
 }
 </script>
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Computer Lab | Rusumo High School (RHS)">
-<meta name="twitter:description" content="Computer Lab — Rusumo High School (RHS). Learn about our programs, admissions, campus life, and contact information.">
+<meta name="twitter:title" content="Advanced Level (A Level) - REB Curriculum | Rusumo High School (RHS)">
+<meta name="twitter:description" content="Advanced Level (A Level) - REB Curriculum — Rusumo High School (RHS). Learn about our programs, admissions, campus life, and contact information.">
 <meta name="twitter:image" content="https://rusumohighschool.org/assets/img/hero.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Computer Lab | Rusumo High School (RHS)">
-<meta property="og:description" content="Computer Lab — Rusumo High School (RHS). Learn about our programs, admissions, campus life, and contact information.">
-<meta property="og:url" content="https://rusumohighschool.org/facilities/computer-lab.html">
+<meta property="og:title" content="Advanced Level (A Level) - REB Curriculum | Rusumo High School (RHS)">
+<meta property="og:description" content="Advanced Level (A Level) - REB Curriculum — Rusumo High School (RHS). Learn about our programs, admissions, campus life, and contact information.">
+<meta property="og:url" content="https://rusumohighschool.org/programs/cambridge-currriculum.html">
 <meta property="og:image" content="https://rusumohighschool.org/assets/img/hero.jpg">
-<link rel="canonical" href="https://rusumohighschool.org/facilities/computer-lab.html">
+<link rel="canonical" href="https://rusumohighschool.org/programs/cambridge-currriculum.html">
 
     <meta charset="utf-8">
-    <title>Computer Lab | Rusumo High School (RHS)</title>
+    <title>Advanced Level (A Level) - REB Curriculum | Rusumo High School (RHS)</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="keywords" content="Rusumo High School, RHS, Kirehe, Rwanda, Computer Lab">
-    <meta name="description" content="Computer Lab — Rusumo High School (RHS) in Kirehe, Rwanda. Learn about programs, admissions, campus life, and contact details.">
+    <meta name="keywords" content="Rusumo High School, RHS, Kirehe, Rwanda, Advanced Level (A Level) - REB Curriculum">
+    <meta name="description" content="Advanced Level (A Level) - REB Curriculum — Rusumo High School (RHS) in Kirehe, Rwanda. Learn about programs, admissions, campus life, and contact details.">
 
     <!-- Favicon -->
         <link href="../assets/img/RHS Logo edited.jpg" rel="icon">
@@ -98,26 +84,23 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" wire:navigate.hover class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="../index.html" wire:navigate.hover class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             
-                        <div>
-                            <img src="assets/img/RHS Logo edited.jpg" alt="Rusumo High School" style="max-height:70px;" loading="lazy" decoding="async" srcset="assets/img/RHS Logo edited.jpg 1x">
-                            <p style="margin: 5px 0 0 0; font-size: 11px; color: #666; font-weight: 600;">Science, Conscience and Discipline</p>
-                        </div>
+                        <img src="../assets/img/RHS Logo edited.jpg" alt="Rusumo High School" style="max-height:70px;" loading="lazy" decoding="async" srcset="../assets/img/RHS Logo edited.jpg 1x">
                     </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" wire:navigate.hover class="nav-item nav-link active">Home</a>
+                <a href="../index.html" wire:navigate.hover class="nav-item nav-link ">Home</a>
                 
                 <!-- About Dropdown -->
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
                     <div class="dropdown-menu m-0">
-                        <a href="our-school.html" wire:navigate.hover class="dropdown-item">Our School</a>
-                        <a href="alumni/Alumni.html" wire:navigate.hover class="dropdown-item">Alumni</a>
+                        <a href="../our-school.html" wire:navigate.hover class="dropdown-item">Our School</a>
+                        <a href="../alumni/Alumni.html" wire:navigate.hover class="dropdown-item">Alumni</a>
                     </div>
                 </div>
 
@@ -125,10 +108,10 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
                     <div class="dropdown-menu m-0">
-                        <a href="our-programs/Program.html" wire:navigate.hover class="dropdown-item">Programs</a>
-                        <a href="academic/Fees.html" wire:navigate.hover class="dropdown-item">Fees</a>
-                        <a href="academic/Indashyikirwa.html" wire:navigate.hover class="dropdown-item">Indashyikirwa</a>
-                        <a href="admissions/Admissions.html" wire:navigate.hover class="dropdown-item">Admissions</a>
+                        <a href="../our-programs/Program.html" wire:navigate.hover class="dropdown-item">Programs</a>
+                        <a href="../academic/Fees.html" wire:navigate.hover class="dropdown-item">Fees</a>
+                        <a href="../academic/Indashyikirwa.html" wire:navigate.hover class="dropdown-item">Indashyikirwa</a>
+                        <a href="../admissions/Admissions.html" wire:navigate.hover class="dropdown-item">Admissions</a>
                     </div>
                 </div>
 
@@ -136,17 +119,15 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Campus Life</a>
                     <div class="dropdown-menu m-0">
-                        <a href="our-facilities/Facilities.html" wire:navigate.hover class="dropdown-item">Facilities</a>
-                        <a href="activities/Activities.html" wire:navigate.hover class="dropdown-item">School Activities</a>
-                        <a href="staff/Staff.html" wire:navigate.hover class="dropdown-item">Staff Directory</a>
+                        <a href="../our-facilities/Facilities.html" wire:navigate.hover class="dropdown-item">Facilities</a>
+                        <a href="../activities/Activities.html" wire:navigate.hover class="dropdown-item">School Activities</a>
+                        <a href="../staff/Staff.html" wire:navigate.hover class="dropdown-item">Staff Directory</a>
                     </div>
                 </div>
-
-
-                <a href="gallery/Gallery.html" wire:navigate.hover class="nav-item nav-link">Gallery</a>
+                <a href="../gallery/Gallery.html" wire:navigate.hover class="nav-item nav-link ">Gallery</a>
             </div>
             <div class="d-flex align-items-stretch align-items-lg-center px-4 px-lg-3 pb-4 pb-lg-0 ms-lg-2">
-                <a href="Contact/Contact.html" wire:navigate.hover class="btn btn-primary py-3 px-lg-4">Contact Us<i class="fa fa-arrow-right ms-2"></i></a>
+                <a href="../Contact/Contact.html" wire:navigate.hover class="btn btn-primary py-3 px-lg-4">Contact Us<i class="fa fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </nav>
@@ -157,8 +138,8 @@
                     <div class="container py-3">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 small">
-            <li class="breadcrumb-item"><a href="../our-facilities/Facilities.html" wire:navigate.hover>Facilities</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Computer Lab</li>
+            <li class="breadcrumb-item"><a href="../our-programs/Program.html" wire:navigate.hover>Programs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Advanced Level (A Level)</li>
         </ol>
     </nav>
 </div>
@@ -167,12 +148,38 @@
     <div class="container">
         <div class="nlca-detail-layout">
             <div class="nlca-detail-gallery-col">
-                <div class="nlca-detail-hero-wrap shadow rounded-3 overflow-hidden" style="background-image: url('../assets/img/all.jpg'); background-size: cover; background-position: center; height: 400px;"></div>
+                <div class="nlca-detail-hero-wrap shadow rounded-3 overflow-hidden" style="background-image: url('../assets/img/kids.jpg'); background-size: cover; background-position: center; height: 400px;"></div>
                             </div>
             <div class="nlca-detail-desc-col">
-                <h1 class="h2 nlca-section-title text-start mb-3">Computer Lab</h1>
-                <div class="nlca-detail-body text-muted"><p><span style="color: rgb(55, 65, 81); font-family: Roboto, sans-serif; white-space: pre-wrap;">Our computer lab is a state-of-the-art facility that is equipped with modern computer hardware and software. It provides our students with hands-on experience in the latest technologies and tools, enabling them to develop their computer literacy skills. Our computer lab is supervised by trained technicians who ensure that our equipment is always in good working condition</span></p></div>
-                                <a href="../our-facilities/Facilities.html" class="btn btn-primary mt-4" wire:navigate.hover>Back to Facilities</a>
+                <h1 class="h2 nlca-section-title text-start mb-3">Advanced Level (A Level) - REB Curriculum</h1>
+                <div class="nlca-detail-body text-muted">
+                    <p><strong>Three-Year Advanced Program (S4 - S6)</strong></p>
+                    <p>Our Advanced Level program is designed to prepare students for university entrance and professional careers through rigorous REB-based curriculum. The program spans three years with specialized pathways in Science, Mathematics, Humanities, Languages, and specialized combinations.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Senior 4 (S4) - Foundation Year</strong></p>
+                    <p>Students choose one of four specialized streams to establish their academic foundation:</p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>MS1</strong> - Maths and Sciences One</li>
+                        <li><strong>MS2</strong> - Maths and Sciences Two</li>
+                        <li><strong>ARH</strong> - Art and Humanities</li>
+                        <li><strong>LGG</strong> - Languages</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;"><strong>Senior 5 & 6 (S5-S6) - Advanced Specialization</strong></p>
+                    <p>Students advance to specialized combinations based on their career aspirations and academic performance:</p>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>PCM</strong> - Physics, Chemistry, Mathematics (Engineering/Science)</li>
+                        <li><strong>MPG</strong> - Mathematics, Physics, Geography (Sciences)</li>
+                        <li><strong>MEG</strong> - Mathematics, Economics, Geography (Social Sciences)</li>
+                        <li><strong>PCB</strong> - Physics, Chemistry, Biology (Medical Sciences)</li>
+                        <li><strong>HGL</strong> - History, Geography, Literature (Humanities)</li>
+                        <li><strong>LFK</strong> - Languages, French, Kinyarwanda (Languages)</li>
+                        <li><strong>MCB</strong> - Mathematics, Chemistry, Biology (Applied Sciences)</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">All programs follow the REB (Rwanda Education Board) curriculum framework, ensuring quality education aligned with national and international standards.</p>
+                </div>
+                                <a href="../our-programs/Program.html" class="btn btn-primary mt-4" wire:navigate.hover>Back to Programs</a>
             </div>
         </div>
     </div>
@@ -208,15 +215,15 @@
                                 </li>
                                                                                         <li class="nlca-footer-contact-row">
                                     <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-phone-alt"></i></span>
-                                    <a class="nlca-footer-contact-text" href="tel:0788871560" onclick="gtag('event','phone_click',{'phone':'0788871560'})">0788871560</a>
+                                    <a class="nlca-footer-contact-text" href="tel:0788871560">0788871560</a>
                                 </li>
                                                                                         <li class="nlca-footer-contact-row">
                                     <span class="nlca-footer-contact-icon" aria-hidden="true"><i class="fa fa-envelope"></i></span>
-                                    <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.org">info@rusumohighschool.org</a>
+                                    <a class="nlca-footer-contact-text" href="mailto:info@rusumohighschool.rw">info@rusumohighschool.rw</a>
                                 </li>
                                                     </ul>
                         <div class="nlca-footer-social d-flex flex-wrap gap-2 mt-4 align-items-center">
-                                                            <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/0788871560" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                                                            <a class="nlca-footer-social-btn nlca-footer-social-btn--wa" href="https://wa.me/0788871560" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                                                                                         <a class="nlca-footer-social-btn" href="https://www.facebook.com/rusumohighschool" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                                                                                         <a class="nlca-footer-social-btn" href="https://www.instagram.com/rusumohighschool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                                                     </div>
@@ -231,7 +238,7 @@
                             <span class="nlca-footer-copy">&copy; 2026 â€” <a href="../index.html" wire:navigate>Rusumo High School</a>. All rights reserved.</span>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
-                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/0788871560" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})">RD Solutions</a></span>
+                            <span class="nlca-footer-credit">Designed By <a class="border-bottom" href="https://wa.me/0788871560">RD Solutions</a></span>
                         </div>
                     </div>
                 </div>
@@ -240,7 +247,7 @@
     </footer>
     <!-- Footer End -->
 
-            <a href="https://wa.me/0788871560" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp â€” tap to chat" onclick="gtag('event','whatsapp_click',{'phone':'0788871560'})">
+            <a href="https://wa.me/0788871560" class="nlca-float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="WhatsApp â€” tap to chat">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
     
